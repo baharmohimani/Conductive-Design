@@ -35,14 +35,11 @@ if ('development' == app.get('env')) {
 }
 
 
-
-
-
 app.get('/', home.view);
-app.get("/products.html", products.view);
-app.get("/services.html", services.view);
-app.get("/contact.html", contact.view);
-app.get("/about.html", about.view);
+app.get('/products', products.view);
+app.get('/services', services.view);
+app.get('/contact', contact.view);
+app.get('/about', about.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){

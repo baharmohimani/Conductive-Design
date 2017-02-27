@@ -2,9 +2,12 @@
   $(function(){
 
     $('.button-collapse').sideNav();
-      $('.slider').slider();
-      $('.slider').height(450);
-      $('.slides').height('90%');
+    $('.carousel.carousel-slider').carousel({fullWidth:true, indicators:true, duration:200});
+    setInterval(moveCarousel,4000);
+    function moveCarousel(){
+        $('.carousel').carousel('next');
+
+    }
 
       
 
