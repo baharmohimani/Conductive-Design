@@ -4,11 +4,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Starter Template - Materialize</title>
-
+      <style>
+      #map {
+        height: 400px;
+        max-width: 600px;
+       }
+    </style>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
 
@@ -38,6 +44,13 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+    
+    
+        <h3>Global Offices</h3>
+    <div id="map"></div>
+
+    
+    
       <footer class="page-footer grey">
       <div class="row">
         <div class="col l6 s12">
@@ -103,6 +116,76 @@
 
 
   <!--  Scripts-->
+    
+    <script>
+      function initMap() {
+        var hq = {lat: 37.397615, lng: -121.89176829999997};
+        var brea = {lat: 33.91668049999999, lng: -117.90006040000003};
+        var israel = {lat: 32.0596324, lng: 34.81603419999999};
+        var russia = {lat: 60.040885, lng: 30.31673269999999};
+        var taiwan = {lat: 24.7816461, lng: 121.00591540000005};
+        var hongkong = {lat: 22.31058609999999, lng: 114.22298209999997};
+        var shanghai = {lat: 31.1902873, lng: 121.5883};
+        var hongkong2 = {lat: 22.283992, lng: 114.15663700000005};
+        var swiss = {lat: 47.0124136, lng: 6.999854300000038};
+        var germany = {lat: 49.0757141, lng: 9.559694700000023};
+        var japan = {lat: 35.7070879, lng: 139.77172970000004};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 1,
+          minZoom: 1,
+          center: hq
+        });
+        var hqmarker = new google.maps.Marker({
+          position: hq,
+          map: map
+        });
+        var breamarker = new google.maps.Marker({
+          position: brea,
+          map: map
+        });
+        var israelmarker = new google.maps.Marker({
+          position: israel,
+          map: map
+        });
+        var russiamarker = new google.maps.Marker({
+          position: russia,
+          map: map
+        });
+        var taiwanmarker = new google.maps.Marker({
+          position: taiwan,
+          map: map
+        });
+        var hongkongmarker = new google.maps.Marker({
+          position: hongkong,
+          map: map
+        });
+        var shanghaimarker = new google.maps.Marker({
+          position: shanghai,
+          map: map
+        });
+        var hongkong2marker = new google.maps.Marker({
+          position: hongkong2,
+          map: map
+        });
+        var swissmarker = new google.maps.Marker({
+          position: swiss,
+          map: map
+        });
+        var germanymarker = new google.maps.Marker({
+          position: germany,
+          map: map
+        });
+        var japanmarker = new google.maps.Marker({
+          position: japan,
+          map: map
+        });
+          
+          
+      }
+    </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt2_jkQWKuHl6iy02idQyWXAQTGJLx2io&callback=initMap"
+    async defer></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
