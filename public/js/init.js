@@ -2,19 +2,22 @@
   $(function(){
 
     $('.button-collapse').sideNav();
-    $('.carousel.carousel-slider').carousel({fullWidth:true, indicators:true, duration:200});
-    setInterval(moveCarousel,4000);
-    function moveCarousel(){
-        $('.carousel').carousel('next');
+    $('.parallax').parallax();
+      
+    var $window = $(window),
+    $card = $('.card');
+
+    function resize() {
+        if ($window.width() < 514) {
+            $card.removeClass('horizontal');
+        }
 
     }
 
-        $('.scrollspy').scrollSpy();
-      $('.target').pushpin({
-      top: 0,
-      bottom: 1000,
-      offset: 0
-    });
+    $window
+        .resize(resize)
+        .trigger('resize');
+
 
 
   }); // end of document ready
