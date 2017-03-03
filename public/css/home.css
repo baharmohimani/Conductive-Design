@@ -72,8 +72,8 @@ li {
 }
 
 .image {
-    border-right: 1px 
-    solid #000; 
+    border-right: 1px solid #000; 
+    width: 100%;
     padding-right: 10px;}
 
 /* applies to any <p> descendants of an element of class "example-class-selector" */
@@ -96,5 +96,9 @@ li {
     border-radius: 500%;
 }
 
-
+@media only screen and (min-width: 960px) {
+    .carousel {
+        height: 475px;
+    }
+}
 
