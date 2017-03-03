@@ -11,6 +11,10 @@ var products = require('./routes/products');
 var services = require('./routes/services');
 var contact = require('./routes/contact');
 var about = require('./routes/about');
+var productcategory = require('./routes/productcategory');
+var actualproduct = require('./routes/actualproduct');
+
+
 // var user = require('./routes/user');
 
 var app = express();
@@ -37,6 +41,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', home.view);
 app.get('/products', products.view);
+app.get('/productcategory', productcategory.view);
+app.get('/actualproduct', actualproduct.view);
 app.get('/services', services.view);
 app.get('/contact', contact.view);
 app.get('/about', about.view);
