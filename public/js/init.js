@@ -8,7 +8,7 @@
     $card = $('.card');
 
     function resize() {
-        if ($window.width() < 514) {
+        if ($window.width() < 1400) {
             $card.removeClass('horizontal');
         }
 
