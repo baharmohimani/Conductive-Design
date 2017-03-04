@@ -13,6 +13,8 @@ var contact = require('./routes/contact');
 var about = require('./routes/about');
 var productcategory = require('./routes/productcategory');
 var actualproduct = require('./routes/actualproduct');
+var dashboard = require('./routes/dashboard');
+
 
 
 // var user = require('./routes/user');
@@ -46,7 +48,7 @@ app.get('/actualproduct', actualproduct.view);
 app.get('/services', services.view);
 app.get('/contact', contact.view);
 app.get('/about', about.view);
-
+app.get('/dashboard', dashboard.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
