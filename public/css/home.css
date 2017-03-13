@@ -95,7 +95,9 @@ li {
 .img-circle {
     border-radius: 500%;
 }
-
+.sizeNav{
+    font-size: 170px;
+}
 @media only screen and (min-width: 960px) {
     .carousel {
         height: 475px;
