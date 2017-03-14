@@ -13,6 +13,12 @@ var contact = require('./routes/contact');
 var about = require('./routes/about');
 var productcategory = require('./routes/productcategory');
 var actualproduct = require('./routes/actualproduct');
+
+var p9000 = require('./routes/p9000');
+var LiftOffSystem = require('./routes/LiftOffSystem');
+
+
+
 var dashboard = require('./routes/dashboard');
 
 
@@ -49,6 +55,11 @@ app.get('/services', services.view);
 app.get('/contact', contact.view);
 app.get('/about', about.view);
 app.get('/dashboard', dashboard.view);
+
+app.get('/LiftOffSystem', LiftOffSystem.view);
+app.get('/p9000', p9000.view);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
