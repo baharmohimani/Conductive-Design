@@ -15,6 +15,7 @@ var productcategory = require('./routes/productcategory');
 var actualproduct = require('./routes/actualproduct');
 
 var p9000 = require('./routes/p9000');
+var SVG8X = require('./routes/SVG8X');
 var LiftOffSystem = require('./routes/LiftOffSystem');
 
 
@@ -58,6 +59,8 @@ app.get('/dashboard', dashboard.view);
 
 app.get('/LiftOffSystem', LiftOffSystem.view);
 app.get('/p9000', p9000.view);
+app.get('/SVG8X', SVG8X.view);
+
 
 
 
