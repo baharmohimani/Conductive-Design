@@ -26,6 +26,10 @@ var v1000 = require('./routes/v1000');
 var v1020 = require('./routes/v1020');
 var s5000 = require('./routes/s5000');
 var SVG8X = require('./routes/SVG8X');
+var p8060 = require('./routes/p8060');
+var p8010 = require('./routes/p8010');
+
+
 
 
 
@@ -81,6 +85,9 @@ app.get('/v1000', v1000.view);
 app.get('/v1020', v1020.view);
 app.get('/s5000', s5000.view);
 app.get('/SVG8X', SVG8X.view);
+app.get('/p8060', p7000.view);
+app.get('/p8010', p7000.view);
+
 
 
 
