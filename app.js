@@ -85,8 +85,8 @@ app.get('/v1000', v1000.view);
 app.get('/v1020', v1020.view);
 app.get('/s5000', s5000.view);
 app.get('/SVG8X', SVG8X.view);
-app.get('/p8060', p7000.view);
-app.get('/p8010', p7000.view);
+app.get('/p8060', p8060.view);
+app.get('/p8010', p8010.view);
 
 
 
