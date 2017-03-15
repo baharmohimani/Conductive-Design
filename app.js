@@ -16,6 +16,8 @@ var actualproduct = require('./routes/actualproduct');
 
 var p9000 = require('./routes/p9000');
 var SVG8X = require('./routes/SVG8X');
+var v2000 = require('./routes/v2000');
+var v3000 = require('./routes/v3000');
 var LiftOffSystem = require('./routes/LiftOffSystem');
 
 
@@ -60,6 +62,10 @@ app.get('/dashboard', dashboard.view);
 app.get('/LiftOffSystem', LiftOffSystem.view);
 app.get('/p9000', p9000.view);
 app.get('/SVG8X', SVG8X.view);
+app.get('/v2000', v2000.view);
+app.get('/v3000', v3000.view);
+
+
 
 
 
