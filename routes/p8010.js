@@ -1,4 +1,4 @@
 exports.view = function(req, res){
-    res.render('P8010');
+    res.render('p8010');
 };
 
