@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
 
 
 
@@ -408,9 +410,6 @@ h6,
 .mbr-gallery-filter li:hover {
   color: #c0a375;
 }
-.scrollToTop_wraper {
-  opacity: 0 !important;
-}
 #menu-0 .hide-buttons .nav-btn {
   display: none !important;
 }
@@ -486,6 +485,7 @@ h6,
 }
 #features1-4 .mbr-cards-col:nth-child(odd) .card-text {
   text-align: left;
+  font-family: 'Lato', sans-serif;
 }
 #features1-4 .mbr-cards-col:nth-child(odd) .card-subtitle {
   text-align: left;
@@ -571,84 +571,126 @@ h6,
 #features4-l P {
   text-align: left;
 }
-#menu-m .hide-buttons .nav-btn {
-  display: none !important;
+#header2-1c .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .navbar-caption {
-  color: #ffffff;
+#header2-1j .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .navbar-toggler {
-  color: #ffffff;
+#header2-1q .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .link,
-#menu-m .dropdown-item {
-  color: #ffffff;
+#header2-1x .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .link {
-  font-size: 0.75rem;
+#header2-23 .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .dropdown-item,
-#menu-m .nav-dropdown-sm .link {
-  font-size: 0.812rem;
+#msg-box5-24 H3 {
+  text-align: left;
+  font-size: 48px;
 }
-#menu-m .link:hover,
-#menu-m .dropdown-item:hover,
-#menu-m .link:focus,
-#menu-m .dropdown-item:focus {
-  color: #c0a375;
+#header2-29 .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .link[aria-expanded="true"],
-#menu-m .dropdown-menu {
-  background: #0e0e0e;
+#msg-box5-2a H3 {
+  text-align: left;
+  font-size: 48px;
 }
-#menu-m .nav-dropdown-sm .link:focus,
-#menu-m .nav-dropdown-sm .link:hover,
-#menu-m .nav-dropdown-sm .dropdown-item:focus,
-#menu-m .nav-dropdown-sm .dropdown-item:hover {
-  background: #202020!important;
+#header2-2f .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .navbar,
-#menu-m .nav-dropdown-sm,
-#menu-m .nav-dropdown-sm .link[aria-expanded="true"],
-#menu-m .nav-dropdown-sm .dropdown-menu {
-  background: #282828;
+#msg-box5-2g H3 {
+  text-align: left;
+  font-size: 48px;
 }
-#menu-m .bg-color.transparent .link {
-  color: #ffffff;
-  transition: none;
+#header2-2l .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .bg-color.transparent.opened .link {
-  transition: color 0.2s ease-in-out;
+#msg-box5-2m H3 {
+  text-align: left;
+  font-size: 48px;
 }
-#menu-m .bg-color.transparent.opened .link:hover,
-#menu-m .bg-color.transparent.opened .link:focus {
-  color: #c0a375;
+#header2-2r .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .link[aria-expanded="true"],
-#menu-m .dropdown-item[aria-expanded="true"] {
-  color: #c0a375!important;
+#header2-2r .mbr-section-title {
+  font-size: 24px;
 }
-#menu-m.mbr-navbar--stuck .mbr-navbar__section {
-  background: #2c2c2c;
+#msg-box5-2s H3 {
+  text-align: left;
+  font-size: 48px;
 }
-#menu-m .mbr-navbar__hamburger {
-  color: #ffffff;
+#header2-2y .mbr-section-text {
+  font-size: 20px;
 }
-#menu-m .close-icon::before,
-#menu-m .close-icon::after {
-  background-color: #ffffff;
+#header2-2y .mbr-section-title {
+  font-size: 24px;
 }
-#msg-box6-o .mbr-section-title,
-#msg-box6-o .lead p {
+#msg-box5-2z H3 {
+  text-align: left;
+  font-size: 48px;
+}
+#header2-34 .mbr-section-text {
+  font-size: 20px;
+}
+#header2-34 .mbr-section-title {
+  font-size: 24px;
+}
+#msg-box5-35 H3 {
+  text-align: left;
+  font-size: 48px;
+}
+#header2-39 .mbr-section-text {
+  font-size: 20px;
+}
+#header2-39 .mbr-section-title {
+  font-size: 24px;
+}
+#msg-box5-3a H3 {
+  text-align: left;
+  font-size: 48px;
+}
+#header2-3j .mbr-section-text {
+  font-size: 20px;
+}
+#header2-3j .mbr-section-title {
+  font-size: 24px;
+}
+#msg-box5-3k H3 {
+  text-align: left;
+  font-size: 48px;
+}
+#msg-box8-3w .mbr-section-title,
+#msg-box8-3w p {
   color: #fff;
 }
-#features4-p .card-subtitle {
-  color: #bcbcbc;
+#msg-box8-3w .lead P {
+  font-size: 20px;
 }
-#features4-p .iconbox {
-  background-color: #f2f2f2;
-  border-color: #f2f2f2;
+#features3-3y P {
+  color: #ffffff;
+  text-align: center;
 }
-#features4-p P {
-  text-align: left;
+#features3-3y H4 {
+  color: #ffffff;
+}
+#features3-40 H4 {
+  color: #ffffff;
+}
+#features3-40 P {
+  color: #ffffff;
+  text-align: center;
+}
+#features3-41 P {
+  color: #ffffff;
+}
+#features3-41 H4 {
+  color: #ffffff;
+}
+#form1-3r .form-control-label {
+  color: #232323;
+}
+#form1-3r SMALL {
+  color: #000000;
 }
