@@ -25,15 +25,16 @@
 }
 
 .mbr-gallery .icon-focus {
-  color: white;
+  background-color: white;
+  color:black;
   opacity: 0;
   position: absolute;
-  top: calc(50% - 24px);
-  left: calc(50% - 32px);
-  font-size: 3rem !important;
+  top: 0;
+  left: 0;
+  font-size: 0.8rem !important;
   transition: .2s opacity ease-in-out;
   z-index: 5;
-  font-family: 'et-line' !important;
+  font-family: 'Raleway' !important;
 }
 
 .mbr-gallery .icon-focus::before {
