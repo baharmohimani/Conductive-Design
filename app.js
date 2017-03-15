@@ -18,7 +18,7 @@ var p9000 = require('./routes/p9000');
 var SVG8X = require('./routes/SVG8X');
 var v2000 = require('./routes/v2000');
 var v3000 = require('./routes/v3000');
-// var p7000 = require('./routes/p7000');
+var p7000 = require('./routes/p7000');
 var p900030 = require('./routes/p900030');
 var SVG8XScrub = require('./routes/SVG8XScrub');
 var LiftOffSystem = require('./routes/LiftOffSystem');
@@ -26,8 +26,8 @@ var v1000 = require('./routes/v1000');
 var v1020 = require('./routes/v1020');
 var s5000 = require('./routes/s5000');
 var SVG8X = require('./routes/SVG8X');
-// var p8060 = require('./routes/p8060');
-// var p8010 = require('./routes/p8010');
+var p8060 = require('./routes/p8060');
+var p8010 = require('./routes/p8010');
 
 
 
@@ -78,15 +78,15 @@ app.get('/p9000', p9000.view);
 app.get('/SVG8X', SVG8X.view);
 app.get('/v2000', v2000.view);
 app.get('/v3000', v3000.view);
-// app.get('/p7000', p7000.view);
+app.get('/p7000', p7000.view);
 app.get('/p900030', p900030.view);
 app.get('/SVG8XScrub', SVG8XScrub.view);
 app.get('/v1000', v1000.view);
 app.get('/v1020', v1020.view);
 app.get('/s5000', s5000.view);
 app.get('/SVG8X', SVG8X.view);
-// app.get('/p8060', p8060.view);
-// app.get('/p8010', p8010.view);
+app.get('/p8060', p8060.view);
+app.get('/p8010', p8010.view);
 
 
 
