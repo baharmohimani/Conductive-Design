@@ -1,5 +1,5 @@
 exports.view = function(req, res){
-    res.render('v1000');
+    res.render('V1000');
 };
 
 
