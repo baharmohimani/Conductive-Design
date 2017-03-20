@@ -1,0 +1,33 @@
+llvm::Value *FieldAccess::Emit() {
+    if(this->base != NULL) {
+        llvm::Value *val = base->Emit();
+        llvm::BasicBlock *bb = irgen->GetBasicBlock();
+        vector<llvm::Constant*> swizzles;
+
+        if(this->field != NULL) {
+            llvm::Constant *idx;
+            char *c = this->field->GetName();
+            for(char* i = c; *i; i++) {
+                if(*i == 'x')
+                    idx = llvm::ConstantInt::get(irgen->GetIntType(), 0);
+                else if(*i == 'y')
+                    idx = llvm::ConstantInt::get(irgen->GetIntType(), 1);
+                else if(*i == 'z')
+                    idx = llvm::ConstantInt::get(irgen->GetIntType(), 2);
+                else if(*i == 'w')
+                    idx = llvm::ConstantInt::get(irgen->GetIntType(), 3);
+                else
+                    idx = llvm::ConstantInt::get(irgen->GetIntType(), 100);
+                swizzles.push_back(idx);
+            }
+            if(strlen(c) < 2)
+                return llvm::ExtractElementInst::Create(val, idx, "", bb);
+
+            llvm::ArrayRef<llvm::Constant*> swizzleArrayRef(swizzles);
+            llvm::Constant *m = llvm::ConstantVector::get(swizzleArrayRef);
+            llvm::Value *v = new llvm::ShuffleVectorInst(val, val, m, "", bb);
+            return v;
+        }
+    }
+    return NULL;
+}

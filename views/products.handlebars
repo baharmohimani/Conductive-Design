@@ -224,15 +224,7 @@
 
 <section class="mbr-gallery mbr-section mbr-section-nopadding mbr-slider-carousel" id="gallery3-f" data-filter="true" style="background-color: rgb(0, 0, 0); padding-top: 3rem; padding-bottom: 3rem;">
     <!-- Filter -->
-    <div class="mbr-gallery-filter gallery-filter-active gallery-filter__bg">
-        <ul>
-            <li class="mbr-gallery-filter-all active">All</li>
-        </ul>
-    </div>
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter Products
-  </button>
+    <div id="buttons"></div>
   <div class="dropdown-menu mbr-gallery-filter" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#!">All</a>
     <a class="dropdown-item" href="#!">Wafer Inspection Systems</a>
@@ -246,7 +238,7 @@
   </div>
 </div>
     <!-- Gallery -->
-    <div class="mbr-gallery-row">
+    <div id ="gallery" class="mbr-gallery-row">
         <div class=" mbr-gallery-layout-default">
             <div>
                 <div>
@@ -631,6 +623,7 @@ Fax: 408-383-1889</p>
         <p class="text-xs-center">Copyright (c) 2017 C&amp;D Semiconductor Services Inc.</p>
     </div>
 </footer>
+    
 
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
@@ -647,6 +640,69 @@ Fax: 408-383-1889</p>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/mobirise-gallery/player.min.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
+      <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+    
+        <script>
+        (function() {
+  var imgs = $('#gallery mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p1');
+  var $buttons = $('#buttons');
+  var tagged = {};
+   console.log("We get here");
+    console.log(imgs)
+  imgs.each(function() {
+    var img = this;
+    var tags = $(this).data('tags');
+    if (tags) {
+    console.log("Tags Found");
+      tags.split(',').forEach(function(tagName) {
+        if (tagged[tagName] == null) {
+          tagged[tagName] = [];
+        }
+        console.log("The tag name is " + tagName);
+        tagged[tagName].push(img);
+      })
+    }
+  })
+
+  $('<button/>', {
+    text: 'Show All',
+    class: 'active',
+    click: function() {
+      $(this)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+      $imgs.show();
+    }
+  }).appendTo($buttons);
+
+  $.each(tagged, function(tagName) {
+    var $n = $(tagged[tagName]).length;
+    $('<button/>', {
+      text: tagName + '(' + $n + ')',
+      click: function() {
+        $(this)
+          .addClass('active')
+          .siblings()
+          .removeClass('active');
+        $imgs
+          .hide()
+          .filter(tagged[tagName])
+          .show();
+      }
+    }).appendTo($buttons);
+  });
+}())
+    </script>
+
   
   
   <input name="animation" type="hidden">
