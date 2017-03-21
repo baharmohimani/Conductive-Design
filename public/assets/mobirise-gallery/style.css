@@ -24,6 +24,7 @@
   position: absolute;
 }
 
+
 .mbr-gallery .icon-focus {
   background-color: white;
   color:black;
@@ -36,6 +37,7 @@
   z-index: 5;
   font-family: 'Raleway' !important;
 }
+
 
 .mbr-gallery .icon-focus::before {
   content: '\e01b';
